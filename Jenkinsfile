@@ -17,7 +17,7 @@ pipeline {
                 bat 'npm start'
             }
         }
-        stage('Subir servidor') {
+        stage('Abrir novo terminal') {
             steps {
                 bat 'start cmd'
             }
