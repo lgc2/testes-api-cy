@@ -17,11 +17,6 @@ pipeline {
                 bat 'npm start'
             }
         }
-        stage('Abrir novo terminal') {
-            steps {
-                bat 'start cmd'
-            }
-        }
         stage('Executar Testes') {
             steps {
                 bat 'npm run cy:run'
