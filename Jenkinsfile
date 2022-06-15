@@ -12,14 +12,14 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Subir servidor') {
+        stage('Instalar start-server-and-test') {
             steps {
-                bat 'npm start'
+                bat 'npm install --save-dev start-server-and-test'
             }
         }
         stage('Executar Testes') {
             steps {
-                bat 'npm run cy:run'
+                bat 'npm run ci'
             }
         }
     }
