@@ -11,14 +11,22 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: 14
+          cache: npm
+
+      - name: Install
+        run: npm install
+
       - name: Cypress run
         uses: cypress-io/github-action@v5
         continue-on-error: true
         with:
-          install-command: npm install
           browser: chrome
           start: npm start
       - name: Publish Report
