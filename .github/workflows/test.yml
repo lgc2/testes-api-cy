@@ -23,14 +23,12 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Start server
-        run: npm run start:server
-
       - name: Cypress run
         uses: cypress-io/github-action@v5
         continue-on-error: true
         with:
           browser: chrome
+          run: npm run cy
 
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
