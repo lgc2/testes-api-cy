@@ -28,7 +28,7 @@ jobs:
         continue-on-error: true
         with:
           browser: chrome
-          run: npm run cy
+          run: npm run ci
 
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
