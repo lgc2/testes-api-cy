@@ -8,13 +8,15 @@
     "start": "npx serverest",
     "cy:run": "npx cypress run",
     "ci": "start-server-and-test start http://localhost:3000 cy:run",
+    "cy:run:dash": "cypress run --record --key 7d35bdbb-e5a5-4f1f-81f1-bb3f73eed8a1",
+    "cy:dash:report": "start-server-and-test start http://localhost:3000 cy:run:dash",
     "cy:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json  > mochawesome-report/report.json && npx marge mochawesome-report/report.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^8.3.0",
+    "cypress": "^9.7.0",
     "start-server-and-test": "^1.14.0"
   },
   "dependencies": {
